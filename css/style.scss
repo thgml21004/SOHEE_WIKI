@@ -67,6 +67,31 @@ ul {
     list-style-type: none;
 }
 
+.light-mode {
+	background-color: white;
+	color: black;
+	.content-panel {
+		background-color: #f1f1f1;
+	}
+	.index .articles a, .index .articles a:active, .index .links a, .index .links a:active {
+		color: #000;
+	}
+}
+
+.btn-brightness {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	background: transparent;
+	border: none;
+	img {
+		width: 50px;
+		&.moon {
+			display: none;
+		}
+	}
+}
+
 .navbar, .nav {
 	background-color: $dark-blue;
 
@@ -269,7 +294,7 @@ ul {
 
 		@media (min-width: $screen-md-min) {
 			font-size: 60px;
-			margin-top: -20px;
+			margin-top: 0px;
 		}
 	}
 

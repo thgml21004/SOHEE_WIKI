@@ -7,6 +7,11 @@
   </div>
 </div>
 
+<button class="btn-brightness" onclick="myFunction()">
+  <img src="images/icon_sun.png" class="sun">
+  <img src="images/icon_moon.png" class="moon">
+</button>
+
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/js/jquery.mmenu.min.all.js"></script>
@@ -22,6 +27,21 @@
         $("#my-menu").trigger("open.mm");
       });
    });
+
+   function myFunction() {
+     var element = document.body;
+     element.classList.toggle("light-mode");
+
+     $(".btn-brightness").click(function(){
+       if($("body").hasClass("light-mode") === true) {
+         $(".moon").show();
+         $(".sun").hide();
+       } else {
+         $(".moon").hide();
+         $(".sun").show();
+       }
+     });
+   }
 </script>
 
 {% if page.make-smaller-titles %}
